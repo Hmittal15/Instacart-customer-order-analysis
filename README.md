@@ -41,6 +41,12 @@ Below are the cumulative performance metrics scores for all the employed ML mode
 
 Careful and precise analysis was performed over all the aspects of these models. I compared all the performance metrics scores of these models and analyzed the significance of each. Post introspection of all these models, I can narrow down to ‘Random Forest classifier’ as the best performing model for our use-case. Precision and recall scores in predicting both, 0 and 1 are higher for Random Forest algorithm as compared to other models. This means that model can efficiently predict true positive values of 0 and 1. Consequently, the cumulative F1-score for the model is highest. So, I can confidently quote that this model will generate the most efficient predictions in determining whether a product will get reordered by a user in their future order.
 
+### Deployment:-
+1. Designed simple web page using HTML/CSS which takes customer 'User-Id' as an input.
+2. Formulated the web application using Flask framework. Run the 'app.py' file to launch application.
+3. Deployed the Random Forest model on AWS cloud.
+
+
 ### Future Work:-
 1.	We can implement a solution to this problem using Deep Learning in a more efficient form.
 2.	We can extend this solution to provide even more recommendations, such as for each product we can suggest an item which was most frequently purchased with it.
