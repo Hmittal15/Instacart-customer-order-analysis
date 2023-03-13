@@ -2,10 +2,11 @@
 import joblib
 from flask import Flask, request, url_for
 from get_prediction import get_recommendations
+import os
 
 # https://www.tutorialspoint.com/flask
 import flask
-app = Flask(__name__,template_folder="C:\\Users\\hmitt\\PycharmProjects\\InstacartModelDeployment\\venv")
+app = Flask(__name__,template_folder=os.path.abspath('.'))
 # render_template
 
 @app.route('/')

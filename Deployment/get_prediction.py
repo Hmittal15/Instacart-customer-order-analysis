@@ -24,10 +24,10 @@ def get_recommendations(X=None):
     order_hour_of_day = int(dt_string.split(" ")[1].split(":")[0])  # current date
     order_dow = datetime.today().weekday()  # current day of week
 
-    ulp = pd.read_pickle("user_last_purchase.pkl")
+    ulp = pd.read_pickle("Derived data\\user_last_purchase.pkl")
     if user_id not in ulp['user_id'].values:
         # get top 5 products based on hour of day and day of week
-        top = pd.read_pickle('top10_products.pkl')
+        top = pd.read_pickle('Derived data\\top10_products.pkl')
         top_products = top[(top['order_dow'] == order_dow) & (top['order_hour_of_day'] == order_hour_of_day)][
             'product_name'].values.tolist()
         top_products = {i: value for i, value in enumerate(top_products)}
@@ -50,13 +50,13 @@ def get_recommendations(X=None):
     del ulp, now, today, dt_string, user_last_order_date
     # featurization
 
-    hour_rate = pd.read_pickle("hour_reorder_rate.pkl")
-    day_rate = pd.read_pickle("day_reorder_rate.pkl")
-    p_days_rate = pd.read_pickle("p_days_since_prior_order_reorder_rate.pkl")
-    u_days_rate = pd.read_pickle("u_days_since_prior_order_reorder_rate.pkl")
-    up_days_rate = pd.read_pickle("days_since_prior_reorder_rate.pkl")
+    hour_rate = pd.read_pickle("Derived data\\hour_reorder_rate.pkl")
+    day_rate = pd.read_pickle("Derived data\\day_reorder_rate.pkl")
+    p_days_rate = pd.read_pickle("Derived data\\p_days_since_prior_order_reorder_rate.pkl")
+    u_days_rate = pd.read_pickle("Derived data\\u_days_since_prior_order_reorder_rate.pkl")
+    up_days_rate = pd.read_pickle("Derived data\\days_since_prior_reorder_rate.pkl")
 
-    merged_up_features = pd.read_pickle("Updated_final_dataset.pkl")
+    merged_up_features = pd.read_pickle("Derived data\\Updated_final_dataset.pkl")
 
     featurized_data = merged_up_features[merged_up_features['user_id'] == user_id]
 
@@ -68,7 +68,7 @@ def get_recommendations(X=None):
     if p_days.empty:
         # handle
         p_days = pd.DataFrame(columns=p_days.columns)
-        products_x = pd.read_pickle('product_mappings.pkl')
+        products_x = pd.read_pickle('Derived data\\product_mappings.pkl')
         p_days['product_id'] = products_x['product_id']
         p_days['days_since_prior_order'] = days_since_prior_order
         p_days['p_days_since_prior_order_reorder_rate'] = 0.0
@@ -86,7 +86,7 @@ def get_recommendations(X=None):
     if up_days.empty:
         # handle
         up_days = pd.DataFrame(columns=up_days_rate.columns)
-        products_x = pd.read_pickle('product_mappings.pkl')
+        products_x = pd.read_pickle('Derived data\\product_mappings.pkl')
         up_days['product_id'] = products_x['product_id']
         up_days['user_id'] = user_id
         up_days['days_since_prior_order'] = days_since_prior_order
@@ -111,7 +111,7 @@ def get_recommendations(X=None):
 
     if featurized_data.empty :
         # get top 5 products based on hour of day and day of week
-        top = pd.read_pickle('top10_products.pkl')
+        top = pd.read_pickle('Derived data\\top10_products.pkl')
         top_products = top[(top['order_dow'] == order_dow) & (top['order_hour_of_day'] == order_hour_of_day)][
             'product_name'].values.tolist()
         top_products = {i: value for i, value in enumerate(top_products)}
@@ -138,7 +138,7 @@ def get_recommendations(X=None):
         del data, model
 
         recommended_products = get_best_prediction(featurized_data['product_id'].tolist(), ypred.tolist(), None)
-        products_x = pd.read_pickle('product_mappings.pkl')
+        products_x = pd.read_pickle('Derived data\\product_mappings.pkl')
         recommended_products = products_x.loc[products_x['product_id'].isin(recommended_products)][
             'product_name'].values.tolist()
         recommended_products = {i: value for i, value in enumerate(recommended_products)}
