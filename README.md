@@ -87,8 +87,7 @@ Careful and precise analysis was performed over all the aspects of these models.
 ![Demo](https://user-images.githubusercontent.com/108916132/225123837-2c155764-73bb-442c-addc-a51cdc54a6b8.gif)
 
 ### Link to full explanatory video:-
-[![Video thumbnail](<img width="672" alt="Thumbnail" src="https://user-images.githubusercontent.com/108916132/225133491-0c709a03-1600-47d2-963b-9a29d85e3304.png">
-)](https://github.com/Hmittal15/Instacart-customer-order-analysis/raw/main/Instacart_customer_order_analysis.mp4 "Download or view the video")
+[![Video thumbnail](https://user-images.githubusercontent.com/108916132/225133491-0c709a03-1600-47d2-963b-9a29d85e3304.png)](https://github.com/Hmittal15/Instacart-customer-order-analysis/raw/main/Instacart_customer_order_analysis.mp4 "Download or view the video")
 
 ### Future Work:-
 1.	We can implement a solution to this problem using Deep Learning in a more efficient form.
