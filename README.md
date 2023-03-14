@@ -3,6 +3,7 @@
 
 The objective of this project is to predict which products a user may want to buy in their next order. Instacart open sourced their transactional data of over 3 million orders, from more than 200,000 Instacart users. We shall use this anonymized data on customer orders over time to predict which previously purchased products will be in a user’s next order. The predictions depend on historical data, leading up to the most recent transactions. Meanwhile, also analyzing the customer data to gain some useful insights about the purchasing pattern, which will be powerful in determining future business operations.
 
+```
 📦 Instacart-customer-order-analysis
 ├─ .gitignore
 ├─ Additional features.ipynb
@@ -33,6 +34,7 @@ The objective of this project is to predict which products a user may want to bu
 ├─ Random Forest model.ipynb
 ├─ Report.docx
 └─ XGBoost model.ipynb
+```
 
 ### Description of Dataset:- (https://www.kaggle.com/competitions/instacart-market-basket-analysis/data)
 The data contains anonymized sample of over 3 million orders from more than 200,000 users. For each user, Instacart provided between 4 and 100 of their orders, along with the sequence in which products were placed in the cart. There are a total of 6 files with a total of 207 Megabytes of data. The entire dataset can be broadly categorized into the following:
