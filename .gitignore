@@ -166,3 +166,4 @@ Deployment/Derived_data/days_since_prior_reorder_rate.pkl
 /ce
 /ce.pub
 Instacart_customer_order_analysis_original.mp4
+env_insta/
