@@ -78,10 +78,10 @@ Careful and precise analysis was performed over all the aspects of these models.
 4. Deployed the application on a Google Cloud Platform (GCP) VM instance, utilizing top-tier cloud computing infrastructure to provide fast and reliable hosting.
 
 ### Application demo:-
-
+![Demo](https://user-images.githubusercontent.com/108916132/225123837-2c155764-73bb-442c-addc-a51cdc54a6b8.gif)
 
 ### Link to full explanatory video:-
-
+[![Video thumbnail](http://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://github.com/Hmittal15/Instacart-customer-order-analysis/raw/main/Instacart_customer_order_analysis.mp4 "Download or view the video")
 
 ### Future Work:-
 1.	We can implement a solution to this problem using Deep Learning in a more efficient form.
