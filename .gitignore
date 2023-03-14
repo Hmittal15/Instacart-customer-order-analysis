@@ -161,5 +161,7 @@ cython_debug/
 
 #User-defined
 Deployment/env_insta
-Deployment/Derived data/Updated_final_dataset.pkl
-Deployment/Derived data/days_since_prior_reorder_rate.pkl
+Deployment/Derived_data/Updated_final_dataset.pkl
+Deployment/Derived_data/days_since_prior_reorder_rate.pkl
+/ce
+/ce.pub
