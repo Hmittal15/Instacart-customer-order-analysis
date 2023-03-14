@@ -1,12 +1,40 @@
 # **Instacart Customer Order Analysis**
 ---------------------------------------
 
-The objective of this project is to predict which products a user may want to buy in their next order. Instacart open sourced their transactional data of over 3 million orders, from more than 200,000 Instacart users. We shall use this anonymized data on customer orders over time to predict which previously purchased products will be in a user’s next order. The predictions depend on historical data, leading up to the most recent transactions. Meanwhile, also analyzing the customer data to gain some useful insights about the purchasing pattern, which will be powerful in determining future business operations. With the integration of machine learning algorithms and data analysis platforms, we can impart retailers with robust predictive analytics capabilities, enabling them to stock their stores with the right products at the right time. The algorithms allow the retailers to detect patterns in the various operations and processes of the supply chain. Some additional marketing strategies that retailers might come up with, may include:
-* Design better Product Catalog
-*	Cross marketing on online stores
-*	Roll-out customized emails with add-on sales, etc.
+The objective of this project is to predict which products a user may want to buy in their next order. Instacart open sourced their transactional data of over 3 million orders, from more than 200,000 Instacart users. We shall use this anonymized data on customer orders over time to predict which previously purchased products will be in a user’s next order. The predictions depend on historical data, leading up to the most recent transactions. Meanwhile, also analyzing the customer data to gain some useful insights about the purchasing pattern, which will be powerful in determining future business operations.
 
-### Description of Dataset:-
+📦 Instacart-customer-order-analysis
+├─ .gitignore
+├─ Additional features.ipynb
+├─ Decision Tree model.ipynb
+├─ Demo.gif
+├─ Deployment
+│  ├─ Derived_data
+│  │  ├─ day_reorder_rate.pkl
+│  │  ├─ hour_reorder_rate.pkl
+│  │  ├─ p_days_since_prior_order_reorder_rate.pkl
+│  │  ├─ product_mappings.pkl
+│  │  ├─ top10_products.pkl
+│  │  ├─ u_days_since_prior_order_reorder_rate.pkl
+│  │  └─ user_last_purchase.pkl
+│  ├─ Dockerfile
+│  ├─ app.py
+│  ├─ get_prediction.py
+│  ├─ index.html
+│  ├─ new_user_recommendation.html
+│  ├─ predict.html
+│  ├─ random_forest_model.pkl
+│  └─ requirements.txt
+├─ Feature_Engineering.ipynb
+├─ Instacart_customer_order_analysis.mp4
+├─ Logistic Regression model.ipynb
+├─ Project_EDA.ipynb
+├─ README.md
+├─ Random Forest model.ipynb
+├─ Report.docx
+└─ XGBoost model.ipynb
+
+### Description of Dataset:- (https://www.kaggle.com/competitions/instacart-market-basket-analysis/data)
 The data contains anonymized sample of over 3 million orders from more than 200,000 users. For each user, Instacart provided between 4 and 100 of their orders, along with the sequence in which products were placed in the cart. There are a total of 6 files with a total of 207 Megabytes of data. The entire dataset can be broadly categorized into the following:
 1.	Prior data: Order history of every user. This data contains nearly 3-100 past orders per user (~3.2m orders)
 2.	Train data: Current order data of every user. This data contains only 1 order per user (~131k orders)
@@ -42,17 +70,20 @@ Below are the cumulative performance metrics scores for all the employed ML mode
 Careful and precise analysis was performed over all the aspects of these models. I compared all the performance metrics scores of these models and analyzed the significance of each. Post introspection of all these models, I can narrow down to ‘Random Forest classifier’ as the best performing model for our use-case. Precision and recall scores in predicting both, 0 and 1 are higher for Random Forest algorithm as compared to other models. This means that model can efficiently predict true positive values of 0 and 1. Consequently, the cumulative F1-score for the model is highest. So, I can confidently quote that this model will generate the most efficient predictions in determining whether a product will get reordered by a user in their future order.
 
 ### Deployment:-
-1. Designed simple web page using HTML/CSS which takes customer 'User-Id' as an input.
-2. Formulated the web application using Flask framework. Run the 'app.py' file to launch application.
-3. Deployed the Random Forest model on AWS cloud.
+1. Designed an API using Flask framework to expose the Random Forest model funtionalities.
+2. Designed front-end web-application using HTML/CSS to interact with the Flask API endpoints.
+3. Containerized the application using Docker container, allowing for easier sharing and scalability. Published the Docker image on DockerHub, making it easily accessible to others over the internet (https://hub.docker.com/r/mittal15/instacart/tags).
+4. Deployed the application on a Google Cloud Platform (GCP) VM instance, utilizing top-tier cloud computing infrastructure to provide fast and reliable hosting.
+
+### Application demo:-
+
+
+### Link to full explanatory video:-
 
 
 ### Future Work:-
 1.	We can implement a solution to this problem using Deep Learning in a more efficient form.
 2.	We can extend this solution to provide even more recommendations, such as for each product we can suggest an item which was most frequently purchased with it.
 
-### References:-
-*	https://stackoverflow.com/questions/62581004/how-to-set-class-weights-in-decisiontreeclassifier-for-multi-class-setting
-*	https://github.com/shubhamscifi/Instacart-Market-Basket-Analysis
-*	https://github.com/archd3sai/Instacart-Market-Basket-Analysis
-*	https://asagar60.medium.com/instacart-market-basket-analysis-part-1-introduction-eda-b08fd8250502
+
+## You can find me on <a href="http://www.linkedin.com/in/harshit-mittal-52b292131"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" width="17" height="17" /></a>
