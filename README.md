@@ -1,3 +1,9 @@
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/stable/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![DockerHub](https://img.shields.io/badge/DockerHub-0db7ed?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/)
+[![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
+
+
 # **Instacart Customer Order Analysis**
 ---------------------------------------
 
@@ -81,7 +87,7 @@ Careful and precise analysis was performed over all the aspects of these models.
 ![Demo](https://user-images.githubusercontent.com/108916132/225123837-2c155764-73bb-442c-addc-a51cdc54a6b8.gif)
 
 ### Link to full explanatory video:-
-[![Video thumbnail](![Screenshot (88)](https://user-images.githubusercontent.com/108916132/225125044-ff1d3a60-9b4c-4d29-89b1-cc2fc4bd180d.png)
+[![Video thumbnail](<img width="672" alt="Thumbnail" src="https://user-images.githubusercontent.com/108916132/225133491-0c709a03-1600-47d2-963b-9a29d85e3304.png">
 )](https://github.com/Hmittal15/Instacart-customer-order-analysis/raw/main/Instacart_customer_order_analysis.mp4 "Download or view the video")
 
 ### Future Work:-
